@@ -14,9 +14,14 @@ public class GameController{
         modelo=new Modelo();
     }
 
-    //Nueva partida
+    //Nueva partida (limpia manos)
     public void iniciarPartida(){
         modelo.iniciarPartida();
+    }
+
+    //Reparte las 4 cartas iniciales
+    public void repartirIniciales(){
+        modelo.repartirIniciales();
     }
 
     //Reparte carta al jugador
@@ -52,5 +57,26 @@ public class GameController{
     //Resultado de la partida
     public String getResultado(){
         return modelo.obtenerResultado();
+    }
+
+    //Dinero
+    public int getSaldo(){
+        return modelo.getSaldo();
+    }
+
+    public int getApuesta(){
+        return modelo.getApuesta();
+    }
+
+    public void sumarApuesta(int valor){
+        modelo.sumarApuesta(valor);
+    }
+
+    public void limpiarApuesta(){
+        modelo.limpiarApuesta();
+    }
+
+    public void resolverApuesta(boolean gano, boolean empate){
+        modelo.resolverApuesta(gano,empate);
     }
 }
